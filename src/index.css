@@ -1,0 +1,18 @@
+
+:root{
+    --gradient-bg: linear-gradient(45deg, #121b1a, #1d1a2d);
+    --gradient-bg-transparet: linear-gradient(180deg, #000000b6, #00000079);
+    --logo-color:#DC3535;
+    --logo-text:#667EEA;
+    --gradient-bg-light: linear-gradient(45deg, #283334, #303541);
+}
+
+main {
+    min-height: calc(100vh - (66px + 56px));
+}
+
+body{
+    min-height: 3000px;
+    background-color: #D9D9D9;
+}
+

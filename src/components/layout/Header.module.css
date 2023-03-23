@@ -1,0 +1,124 @@
+.header{
+    padding: 0.5rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    transition: all 0.3s;
+    font-family: 'Saira Condensed', sans-serif;
+    font-weight: bold;
+}
+
+.header :global(.navbar-brand){
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.header :global(.navbar-brand) a {
+    text-decoration: none;
+}
+
+.header:global(.scrolled){
+    background: var(--gradient-bg);
+    padding: 0.2rem 0;
+}
+
+.navLink{
+    text-decoration: none;
+    color: #d5cfcf;
+    font-size: 20px;
+    margin-right: 10px;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.navLink:hover{
+    color: #FFF;
+}
+
+.navLink::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--logo-text);
+    height: 3px;
+    width: 0px;
+    transition: all 0.3s;
+}
+.navLink:hover::after{
+    width: 100%;
+}
+
+
+:global(.nav-link):nth-child(4) .navLink{
+    background-color: var(--logo-color);
+    padding:0px 15px;
+}
+
+:global(.nav-link):nth-child(5) .navLink{
+    background-color: var(--logo-text);
+    padding:0px 15px;
+}
+
+.navLink:global(.active){
+    color: #FFF;
+    border-bottom:3px solid var(--logo-text);
+}
+
+.heart_logo {
+    font-size: 80px;
+    color: #DC3535;
+}
+.heart_logo div {
+    font-size: 30px;
+    color:var(--logo-text);
+}
+
+/* ################ */
+
+@media (min-width: 1001px) {
+    .choicesIcon{
+        display: none !important;
+    }
+}
+@media (max-width: 1000px) {
+    .choicesIcon{
+        display: block;
+    }
+}
+
+@media (max-width: 1000px) {
+    .header .navLink{
+        display: none;
+    }
+}
+
+/* ## */
+/* OverLay and Modal */
+
+.Big_Overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.7);
+    z-index:998;
+}
+
+.Modal-overlay{
+    position: fixed;
+    top: 102.4px;
+    right: 0;
+    width: 0px;
+    background-color:#FFF;
+    z-index: 999;
+    transition: all 0.5s;
+    border-radius: 20px 0px 0px 20px;
+}
+:global(.appear).Modal-overlay{
+    width: 75vw;
+}
+
